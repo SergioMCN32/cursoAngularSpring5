@@ -23,9 +23,9 @@ export class ClienteService {
 
     /*return this.http.get(this.urlEndPoint).pipe(
       map(response => response as Cliente)
-    );*/ 
+    );*/
   }
-  
+
    create(cliente: Cliente): Observable<Cliente> {
       return this.http.post(this.urlEndPoint, cliente, {headers: this.httpHeaders}).pipe(
         map((response: any) => response.cliente as Cliente),
@@ -39,7 +39,7 @@ export class ClienteService {
       );
    }
 
-   getCliente(id): Observable<Cliente>{
+   getCliente(id): Observable<Cliente> {
      return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`).pipe(
        catchError(e => {
          this.router.navigate(['/clientes']);

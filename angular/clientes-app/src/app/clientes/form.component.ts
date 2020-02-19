@@ -21,6 +21,7 @@ export class FormComponent implements OnInit {
 
   cargarCliente(): void {
     this.activatedRoute.params.subscribe(params => {
+      // tslint:disable-next-line: no-string-literal
       const id: string = params['id'];
       if (id) {
         this.clienteService.getCliente(id).subscribe(
