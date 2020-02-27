@@ -5,10 +5,10 @@ import { Injectable, EventEmitter } from '@angular/core';
 })
 export class ModalService {
 
-  modal: boolean = false;
+  public modal: boolean = false;
 
   // tslint:disable-next-line: variable-name
-  private _notificarUpload = new EventEmitter<any>();
+  public _notificarUpload = new EventEmitter<any>();
 
   constructor() { }
 
